@@ -1,3 +1,29 @@
 * {
     font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 25px;
+    border: 2px red solid;
+    h1 {
+        font-size: 35px;
+    }
+}
+
+aside {
+    display: flex;
+    flex-direction: row;
+    margin: 4%;
+    border: 2px red solid;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin: 4%;
+    border: 2px red solid;
+
 }
