@@ -18,6 +18,11 @@ aside {
     flex-direction: row;
     margin: 4%;
     border: 2px red solid;
+    section {
+        padding: 20px;
+        display: inline-block;
+        
+    }
 }
 
 main {
@@ -25,5 +30,11 @@ main {
     flex-direction: row;
     margin: 4%;
     border: 2px red solid;
+    section {
+        padding: 20px;
+    }
+    article {
+        padding: 20px;
+    }
 
 }
