@@ -9,7 +9,12 @@ const formSubmitHandler = function (event) {
     const cityname = nameInputEl.value.trim();
 
     if (cityname) {
+        // ? should be getCityWeather(cityname)
 
+        // * needs to list container and input as empty
+    } else {
+        // ! troubleshooter function to keep the 
+        // ! code from breaking itself
     }
 }
 
