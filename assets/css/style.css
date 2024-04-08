@@ -13,28 +13,49 @@ header {
     }
 }
 
-aside {
-    display: flex;
-    flex-direction: row;
-    margin: 4%;
-    border: 2px red solid;
-    section {
-        padding: 20px;
-        display: inline-block;
-        
-    }
-}
 
 main {
     display: flex;
     flex-direction: row;
-    margin: 4%;
     border: 2px red solid;
-    section {
-        padding: 20px;
-    }
-    article {
-        padding: 20px;
+    aside {
+        display: flex;
+        flex-direction: row;
+        padding: 7%;
+        width: 20%;
+        height: 100%;
+        border: 2px red solid;
+        h2 {
+            padding: 20px;
+            flex-direction: column;
+        }
+        section {
+            padding: 20px;
+            flex-direction: column;
+            p {
+                margin: 0;
+            }
+        }
     }
 
+}
+
+.btn {
+    display: inline-block;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    padding: 20px;
+    border: 2px red solid;
+}
+
+#day-card {
+    margin: 5%;
+}
+
+#week-card {
+    margin: 5%;
 }

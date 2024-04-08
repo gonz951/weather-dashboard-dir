@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie = edge">
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <title>Weather Directory</title>
-    </head>
-    <body>
-        <header>
-            <h1>Weather Dashboard</h1>
-        </header>
-        <aside>
-            <h2>Search for a City</h2>
-            <section>
-                <input 
-                    type="text"
-                    placeholder="search bar"
-                    />
-                    <button>Search</button>
-            </section>
-        </aside>
-        <main>
-            <section>Main card for today's weather</section>
-            <article>Places for cards, later</article>
-        </main>
-        <script src="./assets/js/script.js"></script>
-    </body>
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie = edge">
+     <link rel="stylesheet" href="./assets/css/style.css">
+     <title>Weather Directory</title>
+ </head>
+ <body>
+     <header>
+         <h1>Weather Dashboard</h1>
+     </header>
+     <main>
+         <aside>
+            <div>
+             <h2>Search for a City</h2>
+             <section>
+                 <form id="city-form">
+                     <input type="text" placeholder="search bar"/>
+                     <button type="submit" class="btn">Search</button>
+                 </form>
+             </section>
+            </div>
+         </aside>
+         <div class="dashboard">
+            <div id="main-card">
+             <section>Main card for today's weather</section>
+            </div>
+            <div id="week-card">
+             <article>Places for cards, later</article>
+            </div>
+         </div>
+     </main>
+     <script src="./assets/js/script.js"></script>
+ </body>
 </html>
