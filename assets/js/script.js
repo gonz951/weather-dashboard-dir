@@ -1,5 +1,7 @@
-const APIKey = 'f12afd4f4aecb8e77f094912f64ed517';
+const APIKey = 'f12afd4f4aecb8e77f094912f64ed517'; // the api key
+// to take stuff from the form
 const cityFormEl = document.querySelector('#city-form');
+// to get stuff from the input within the form
 const nameInputEl = document.querySelector('#cityname');
 
 
@@ -19,7 +21,7 @@ const formSubmitHandler = function (event) {
 }
 
 // =========== api stuff ========
-let city;
+// * let city; suggested from api doc but idk
 
 
 const getCityWeather = function (city) {
@@ -27,4 +29,16 @@ const getCityWeather = function (city) {
     
 
     fetch(queryURL)
+    .then(function (response) {
+        if (response.ok) {
+            console.log(response);
+            response.json().then(function(data) {
+                console.log(data);
+                // ? displayCity function should be here
+                // ! should be displayCity(data, city);
+            });
+        } else {
+            // * suggests an alert for an error
+        }
+    })
 }
