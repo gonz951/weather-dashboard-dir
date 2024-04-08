@@ -17,7 +17,6 @@ header {
 main {
     display: flex;
     flex-direction: row;
-    padding: 15%;
     border: 2px red solid;
     /* aside {
         display: flex;
@@ -41,22 +40,35 @@ main {
 
 }
 
+.weather-search {
+    padding: 2%;
+    border: 2px red solid;
+    h2 {
+        font-size: 25px;
+        padding: 10px 0;
+    }
+}
+
 .btn {
     display: inline-block;
 }
 
 .dashboard {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    min-width: none;
-    padding: 20px;
     border: 2px red solid;
+    align-items: center;
 }
 
 #day-card {
-    margin: 5%;
+    padding: 10%;
+    margin: 4%;
+    border: 2px red solid;
 }
 
 #week-card {
-    margin: 5%;
+    padding: 5%;
+    margin: 5% 2%;
+    border: 2px red solid;
 }
