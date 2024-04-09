@@ -1,3 +1,9 @@
+:root {
+    --blue: #3b5ad6;
+    --white: #f6fdff;
+    --gray: #96adbd;
+}
+
 * {
     font-family: monospace;
     margin: 0;
@@ -7,9 +13,11 @@
 header {
     text-align: center;
     padding: 25px;
-    border: 2px red solid;
+    /* border: 2px red solid; */
+    background-color: var(--blue);
     h1 {
         font-size: 50px;
+        color: var(--white);
     }
 }
 
@@ -17,19 +25,21 @@ header {
 main {
     display: flex;
     flex-direction: row;
-    border: 2px red solid;
+    /* border: 2px red solid; */
 
 }
 
 .weather-search {
     padding: 2%;
-    border: 2px red solid;
+    margin: 10px;
+    border-right: 2px var(--gray) solid;
     h2 {
         font-size: 30px;
         padding: 10px 0;
     }
     input {
         font-size: 20px;
+        margin: 10px 0;
     }
 }
 
@@ -37,14 +47,21 @@ main {
     display: inline-block;
     padding: 2px;
     margin: 5px 0;
+    margin-bottom: 10px;
     font-size: 17px;
+}
+
+.city-inventory {
+    margin: 2px;
+    padding: 20px;
+    border-top: 2px var(--gray) solid;
 }
 
 .dashboard {
     display: flex;
     width: 100%;
     flex-direction: column;
-    border: 2px red solid;
+    /* border: 2px red solid; */
     align-items: center;
 }
 
