@@ -3,6 +3,8 @@ const APIKey = 'f12afd4f4aecb8e77f094912f64ed517'; // the api key
 const cityFormEl = document.querySelector('#city-form');
 // to get stuff from the input within the form
 const nameInputEl = document.querySelector('#cityname');
+const weatherContainerEl = document.querySelector('#dashboard');
+
 
 
 const formSubmitHandler = function (event) {
@@ -12,7 +14,6 @@ const formSubmitHandler = function (event) {
 
     if (cityname) {
         // ? should be getCityWeather(cityname)
-
         // * needs to list container and input as empty
     } else {
         // ! troubleshooter function to keep the 
