@@ -1,5 +1,6 @@
 :root {
     --blue: #3b5ad6;
+    --navy: #1f2b57;
     --white: #f6fdff;
     --gray: #96adbd;
 }
@@ -34,21 +35,29 @@ main {
     margin: 10px;
     border-right: 2px var(--gray) solid;
     h2 {
+        color: var(--navy);
         font-size: 30px;
         padding: 10px 0;
     }
     input {
         font-size: 20px;
+        padding: 5px;
         margin: 10px 0;
+        border-color: var(--gray);
+        border-radius: 15px;
     }
 }
 
 .btn {
     display: inline-block;
-    padding: 2px;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 5px;
     margin: 5px 0;
     margin-bottom: 10px;
     font-size: 17px;
+    border-color: var(--navy);
+    border-radius: 20px;
 }
 
 .city-inventory {
