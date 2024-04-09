@@ -18,25 +18,6 @@ main {
     display: flex;
     flex-direction: row;
     border: 2px red solid;
-    /* aside {
-        display: flex;
-        flex-direction: row;
-        padding: 7%;
-        width: 20%;
-        height: 100%;
-        border: 2px red solid;
-        h2 {
-            padding: 20px;
-            flex-direction: column;
-        }
-        section {
-            padding: 20px;
-            flex-direction: column;
-            p {
-                margin: 0;
-            }
-        }
-    } */
 
 }
 
