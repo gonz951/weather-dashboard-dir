@@ -3,8 +3,16 @@ const APIKey = 'f12afd4f4aecb8e77f094912f64ed517'; // the api key
 const cityFormEl = document.querySelector('#city-form');
 // to get city data from the input within the form
 const nameInputEl = document.querySelector('#cityname');
+// This is the container for the weather cards
 const weatherContainerEl = document.querySelector('#dashboard');
+// Const to be used to store the search term buttons
 const citySearchTerm = document.querySelector('#city-inventory');
+
+// Might need to append to these later
+const mainDayCard = document.querySelector('#day-card');
+const minorWeekCard = document.querySelector('#week-card');
+
+
 
 const formSubmitHandler = function (event) {
     event.preventDefault();
@@ -80,4 +88,4 @@ const displayCity = function (cities, searchTerm) {
 // todo: submit handlers ============
 
 cityFormEl.addEventListener('submit', formSubmitHandler);
-console.log(formSubmitHandler())
+console.log(formSubmitHandler());
