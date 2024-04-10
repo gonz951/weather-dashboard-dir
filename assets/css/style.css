@@ -60,7 +60,7 @@ main {
     border-radius: 20px;
 }
 
-.city-inventory {
+#city-inventory {
     margin: 2px;
     padding: 20px;
     border-top: 2px var(--gray) solid;
