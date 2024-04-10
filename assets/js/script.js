@@ -1,9 +1,10 @@
 const APIKey = 'f12afd4f4aecb8e77f094912f64ed517'; // the api key
-// to take stuff from the form
+// to take data from the form
 const cityFormEl = document.querySelector('#city-form');
-// to get stuff from the input within the form
+// to get city data from the input within the form
 const nameInputEl = document.querySelector('#cityname');
 const weatherContainerEl = document.querySelector('#dashboard');
+const citySearchTerm = document.querySelector('#city-inventory');
 
 
 
