@@ -6,15 +6,13 @@ const nameInputEl = document.querySelector('#cityname');
 const weatherContainerEl = document.querySelector('#dashboard');
 const citySearchTerm = document.querySelector('#city-inventory');
 
-
-
 const formSubmitHandler = function (event) {
     event.preventDefault();
 
     const cityname = nameInputEl.value.trim();
 
     if (cityname) {
-        // ? should be getCityWeather(cityname)
+        getCityWeather(cityname)
         // * needs to list container and input as empty
     } else {
         alert('Please enter a city name');
@@ -63,3 +61,8 @@ const displayCity = function (cities, searchTerm) {
         
     }
 }
+
+// todo: submit handlers ============
+
+cityFormEl.addEventListener('submit', formSubmitHandler);
+console.log(formSubmitHandler())
