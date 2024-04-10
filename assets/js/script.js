@@ -38,7 +38,7 @@ const getCityWeather = function (city) {
                 console.log(data);
                 // ? displayCity function should be here
                 // ! should be displayCity(data, city);
-            });
+            }); 
         } else {
             // * suggests an alert for an error
         }
@@ -60,8 +60,14 @@ const displayCity = function (cities, searchTerm) {
     // be the search term into from here 
     citySearchTerm.textContent = searchTerm;
 
-    for (let weather of cities ) {
-        const element = array[index];
+    for (let cityObj of cities ) {
+        // const forecast = `${}`
+
+        // This should be for the main card
+        const cityEl = document.createElement('div');
+
+        // ! Might need to bring in day and week cards
+        // ! as consts for this
         
     }
 }
