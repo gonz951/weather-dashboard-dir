@@ -13,7 +13,7 @@ const mainDayCard = document.querySelector('#day-card');
 const minorWeekCard = document.querySelector('#week-card');
 
 // ? Local storage element for the buttons later
-let cityStore = localStorage.getItem('city');
+let cityStorage = JSON.parse(localStorage.getItem('city'));
 
 
 
@@ -48,14 +48,14 @@ const getCityWeather = function (city) {
             response.json().then(function(data) {
                 console.log(data);
                 // ? displayCity function should be here
-                // ! should be displayCity(data, city);
+                displayCity(data, city);
             }); 
         } else {
-            // * suggests an alert for an error
+            alert(`Error: ${response.statusText}`);
         }
     })
     .catch (function (error) {
-        // * Suggests an alert('error message') here
+        alert('Unable to connect to Open Weather');
     });
 };
 
@@ -70,20 +70,30 @@ const displayCity = function (cities, searchTerm) {
     // make the citysearchterm text content 
     // be the search term into from here 
     citySearchTerm.textContent = searchTerm;
+    console.log(searchTerm)
+
+    
 
     for (let cityObj of cities ) {
         // Todo: use forecast const to find:
         // * weather.array[i].icon
-        // * main.temp
-        // * wind.speed
-        // * and main.humidity
+        // * list.main.temp
+        // * list.wind.speed
+        // * and list.main.humidity
         // const forecast = `${cityObj.main.temp}/`
+        // const forecast = `${cityObj.list.main.temp} ${cityObj.} ${}`
+        const cityTitle = `${cityObj.name}`;
+        
+        const cityCard = document.createElement('div')
+        cityCard.setAttribute('h1', `weather for ${cityTitle}:`);
+        console.log(cityTitle);
 
         // This should be for the main card
-        const cityEl = document.createElement('div');
+        //const cityEl = document.createElement('div');
 
         // ! Might need to bring in day and week cards
         // ! as consts for this
+        cityCard.appendChild(cityTitle);
         
     }
 }
