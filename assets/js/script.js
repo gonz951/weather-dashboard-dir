@@ -5,8 +5,6 @@ const cityFormEl = document.querySelector('#city-form');
 const nameInputEl = document.querySelector('#cityname');
 // This is the container for the weather cards
 const weatherContainerEl = document.querySelector('#dashboard');
-// Const to be used to store the search term buttons
-const citySearchTerm = document.querySelector('#city-inventory');
 
 // Might need to append to these later
 const mainDayCard = document.querySelector('#day-card');
@@ -19,12 +17,12 @@ let cityStorage = JSON.parse(localStorage.getItem('city'));
 
 const formSubmitHandler = function (event) {
     event.preventDefault();
-
+    
     const cityname = nameInputEl.value.trim();
 
     if (cityname) {
         getCityWeather(cityname);
-
+        
         // * needs to list container and input as empty
         weatherContainerEl.textContent = '';
         nameInputEl.value = '';
@@ -40,7 +38,7 @@ const formSubmitHandler = function (event) {
 const getCityWeather = function (city) {
     const queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`;
     
-
+    
     fetch(queryURL)
     .then(function (response) {
         if (response.ok) {
@@ -66,17 +64,19 @@ const displayCity = function (cities, searchTerm) {
         weatherContainerEl.textContent = 'No cities found.';
         return;
     }
-
+    
     // ! ============= button zone
     // make the citysearchterm text content 
+    // Const to be used to store the search term buttons
+    const citySearchTerm = document.querySelector('#city-inventory');
     // be the search term into from here 
     citySearchTerm.textContent = searchTerm;
     console.log(searchTerm);
     console.log(citySearchTerm);
 
     if (searchTerm) {
-        const buttons = document.createElement('button');
-        buttons.setAttribute(citySearchTerm);
+        // const buttons = document.createElement('button');
+        // buttons.setAttribute(citySearchTerm);
 
     }
 
