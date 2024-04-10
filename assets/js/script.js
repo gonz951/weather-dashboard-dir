@@ -12,6 +12,9 @@ const citySearchTerm = document.querySelector('#city-inventory');
 const mainDayCard = document.querySelector('#day-card');
 const minorWeekCard = document.querySelector('#week-card');
 
+// ? Local storage element for the buttons later
+let cityStore = localStorage.getItem('city');
+
 
 
 const formSubmitHandler = function (event) {
