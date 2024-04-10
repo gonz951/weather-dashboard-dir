@@ -71,7 +71,14 @@ const displayCity = function (cities, searchTerm) {
     // make the citysearchterm text content 
     // be the search term into from here 
     citySearchTerm.textContent = searchTerm;
-    console.log(searchTerm)
+    console.log(searchTerm);
+    console.log(citySearchTerm);
+
+    if (searchTerm) {
+        const buttons = document.createElement('button');
+        buttons.setAttribute(citySearchTerm);
+
+    }
 
     // ! ============= button zone
 
