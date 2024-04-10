@@ -61,7 +61,12 @@ const displayCity = function (cities, searchTerm) {
     citySearchTerm.textContent = searchTerm;
 
     for (let cityObj of cities ) {
-        // const forecast = `${}`
+        // Todo: use forecast const to find:
+        // * weather.array[i].icon
+        // * main.temp
+        // * wind.speed
+        // * and main.humidity
+        // const forecast = `${cityObj.main.temp}/`
 
         // This should be for the main card
         const cityEl = document.createElement('div');
