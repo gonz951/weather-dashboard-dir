@@ -67,12 +67,14 @@ const displayCity = function (cities, searchTerm) {
         return;
     }
 
+    // ! ============= button zone
     // make the citysearchterm text content 
     // be the search term into from here 
     citySearchTerm.textContent = searchTerm;
     console.log(searchTerm)
 
-    
+    // ! ============= button zone
+
 
     for (let cityObj of cities ) {
         // Todo: use forecast const to find:
@@ -101,4 +103,4 @@ const displayCity = function (cities, searchTerm) {
 // todo: submit handlers ============
 
 cityFormEl.addEventListener('submit', formSubmitHandler);
-console.log(formSubmitHandler());
+// console.log(formSubmitHandler());
