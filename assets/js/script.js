@@ -12,12 +12,15 @@ const formSubmitHandler = function (event) {
     const cityname = nameInputEl.value.trim();
 
     if (cityname) {
-        getCityWeather(cityname)
+        getCityWeather(cityname);
+
         // * needs to list container and input as empty
+        weatherContainerEl.textContent = '';
+        nameInputEl.value = '';
     } else {
-        alert('Please enter a city name');
+        alert('Please enter a city name.');
     }
-}
+};
 
 // =========== api stuff ========
 // * let city; suggested from api doc but idk
@@ -53,10 +56,11 @@ const displayCity = function (cities, searchTerm) {
         return;
     }
 
-    // 
+    // make the citysearchterm text content 
+    // be the search term into from here 
     citySearchTerm.textContent = searchTerm;
 
-    for (let city of cities ) {
+    for (let weather of cities ) {
         const element = array[index];
         
     }
