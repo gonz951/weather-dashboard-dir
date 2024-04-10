@@ -17,8 +17,7 @@ const formSubmitHandler = function (event) {
         // ? should be getCityWeather(cityname)
         // * needs to list container and input as empty
     } else {
-        // ! troubleshooter function to keep the 
-        // ! code from breaking itself
+        alert('Please enter a city name');
     }
 }
 
@@ -43,4 +42,24 @@ const getCityWeather = function (city) {
             // * suggests an alert for an error
         }
     })
+    .catch (function (error) {
+        // * Suggests an alert('error message') here
+    });
+};
+
+const displayCity = function (cities, searchTerm) {
+    // if there are no cities, display 'cities not found'
+    // return
+    if (cities.length === 0) {
+        weatherContainerEl.textContent = 'No cities found.';
+        return;
+    }
+
+    // 
+    citySearchTerm.textContent = searchTerm;
+
+    for (let city of cities ) {
+        const element = array[index];
+        
+    }
 }
