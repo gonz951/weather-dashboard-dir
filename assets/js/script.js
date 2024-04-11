@@ -33,10 +33,12 @@ const formSubmitHandler = function (event) {
 
 // =========== api stuff ========
 // * let city; suggested from api doc but idk
+// ? NEED FUNCTION FOR DAY WEATHER
 
 
+// ? NEED FUNCTION FOR WEEK WEATHER
 const getCityWeather = function (city) {
-    const queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}&cnt=6`;
+    const queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}`;
     
     
     fetch(queryURL)
@@ -66,18 +68,28 @@ const displayCity = function (data) {
     }
 
     // ! Card Zone ==========================
+    // Main Card
     const currentCityName = data.city.name
+    //const currentCityDate = data.list.array[0].dt_txt
     console.log(mainDayCard)
+    //console.log(data.list)
+    //console.log(data.list.at(0))
+    //console.log(data.list.at(0).dt_txt)
+
     const cardBody = document.createElement('div');
     const cardTitle = document.createElement('h2')
-    cardTitle.textContent = `City Name: ${currentCityName}`;
+    cardTitle.textContent = `Weather for: ${currentCityName}`;
+
+
     cardBody.append(cardTitle);
     mainDayCard.innerHTML = '';
+
+
+
     mainDayCard.append(cardBody);
 
+    minorWeekCard.append('something')
 
-    console.log(cardTitle);
-    console.log(currentCityName);
 
     // ! ============= button zone
     // make the citysearchterm text content 
