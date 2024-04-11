@@ -64,6 +64,8 @@ const displayCity = function (data) {
         weatherContainerEl.textContent = 'No cities found.';
         return;
     }
+
+    // ! Card Zone ==========================
     const currentCityName = data.city.name
     console.log(mainDayCard)
     const cardBody = document.createElement('div');
@@ -76,6 +78,7 @@ const displayCity = function (data) {
 
     console.log(cardTitle);
     console.log(currentCityName);
+
     // ! ============= button zone
     // make the citysearchterm text content 
     // Const to be used to store the search term buttons
@@ -90,33 +93,6 @@ const displayCity = function (data) {
 
     // }
 
-    // // ! ============= button zone
-
-
-    for (let cityObj of data ) {
-        // Todo: use forecast const to find:
-        // * weather.array[i].icon
-        // * main.temp
-        // * wind.speed
-        // * and main.humidity
-        // const forecast = `${cityObj.main.temp}/`
-        // const forecast = `${cityObj.list.main.temp} ${cityObj.} ${}`
-        const cityTitle = `${cityObj.name}`;
-        console.log(cityTitle);
-
-        mainDayCard.append()
-        
-        cityCard.setAttribute('h1', `weather for ${cityTitle}:`);
-        console.log(cityTitle);
-
-        // This should be for the main card
-        //const cityEl = document.createElement('div');
-
-        // ! Might need to bring in day and week cards
-        // ! as consts for this
-        // cityCard.appendChild(cityTitle);
-        
-    }
 }
 
 // todo: submit handlers ============
