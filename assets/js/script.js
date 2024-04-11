@@ -36,7 +36,7 @@ const formSubmitHandler = function (event) {
 
 
 const getCityWeather = function (city) {
-    const queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`;
+    const queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}&cnt=5`;
     
     
     fetch(queryURL)
