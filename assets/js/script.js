@@ -36,7 +36,7 @@ const formSubmitHandler = function (event) {
 
 
 const getCityWeather = function (city) {
-    const queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}&cnt=5`;
+    const queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}&cnt=6`;
     
     
     fetch(queryURL)
@@ -64,7 +64,7 @@ const displayCity = function (data) {
         weatherContainerEl.textContent = 'No cities found.';
         return;
     }
-    const currentCityName = data.name
+    const currentCityName = data.city.name
     console.log(mainDayCard)
     const cardBody = document.createElement('div');
     const cardTitle = document.createElement('h2')
