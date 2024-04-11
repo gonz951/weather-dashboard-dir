@@ -24,7 +24,7 @@ const formSubmitHandler = function (event) {
         getCityWeather(cityname);
         
         // * needs to list container and input as empty
-        weatherContainerEl.textContent = '';
+        // weatherContainerEl.textContent = '';
         nameInputEl.value = '';
     } else {
         alert('Please enter a city name.');
@@ -57,43 +57,55 @@ const getCityWeather = function (city) {
     });
 };
 
-const displayCity = function (cities, searchTerm) {
+const displayCity = function (data) {
     // if there are no cities, display 'cities not found'
     // return
-    if (cities.length === 0) {
+    if (data.length === 0) {
         weatherContainerEl.textContent = 'No cities found.';
         return;
     }
-    
+    const currentCityName = data.name
+    console.log(mainDayCard)
+    const cardBody = document.createElement('div');
+    const cardTitle = document.createElement('h2')
+    cardTitle.textContent = `City Name: ${currentCityName}`;
+    cardBody.append(cardTitle);
+    mainDayCard.innerHTML = '';
+    mainDayCard.append(cardBody);
+
+
+    console.log(cardTitle);
+    console.log(currentCityName);
     // ! ============= button zone
     // make the citysearchterm text content 
     // Const to be used to store the search term buttons
-    const citySearchTerm = document.querySelector('#city-inventory');
-    // be the search term into from here 
-    citySearchTerm.textContent = searchTerm;
-    console.log(searchTerm);
-    console.log(citySearchTerm);
+    // const citySearchTerm = document.querySelector('#city-inventory');
+    // // be the search term into from here 
+    // citySearchTerm.textContent = searchTerm;
+    // console.log(searchTerm);
 
-    if (searchTerm) {
-        // const buttons = document.createElement('button');
-        // buttons.setAttribute(citySearchTerm);
+    // if (searchTerm) {
+    //     // const buttons = document.createElement('button');
+    //     // buttons.setAttribute(citySearchTerm);
 
-    }
+    // }
 
-    // ! ============= button zone
+    // // ! ============= button zone
 
 
-    for (let cityObj of cities ) {
+    for (let cityObj of data ) {
         // Todo: use forecast const to find:
         // * weather.array[i].icon
-        // * list.main.temp
-        // * list.wind.speed
-        // * and list.main.humidity
+        // * main.temp
+        // * wind.speed
+        // * and main.humidity
         // const forecast = `${cityObj.main.temp}/`
         // const forecast = `${cityObj.list.main.temp} ${cityObj.} ${}`
         const cityTitle = `${cityObj.name}`;
+        console.log(cityTitle);
+
+        mainDayCard.append()
         
-        const cityCard = document.createElement('div')
         cityCard.setAttribute('h1', `weather for ${cityTitle}:`);
         console.log(cityTitle);
 
@@ -102,7 +114,7 @@ const displayCity = function (cities, searchTerm) {
 
         // ! Might need to bring in day and week cards
         // ! as consts for this
-        cityCard.appendChild(cityTitle);
+        // cityCard.appendChild(cityTitle);
         
     }
 }
