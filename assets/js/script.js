@@ -35,7 +35,6 @@ const formSubmitHandler = function (event) {
 // * let city; suggested from api doc but idk
 // ? NEED FUNCTION FOR DAY WEATHER
 
-
 // ? NEED FUNCTION FOR WEEK WEATHER
 const getCityWeather = function (city) {
     const queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}`;
@@ -69,19 +68,23 @@ const displayCity = function (data) {
 
     // ! Card Zone ==========================
     // Main Card
-    const currentCityName = data.city.name
+    // Grabbing elements within the arrays 
+    const currentCityName = data.city.name;
+    const currentTemp = data.list.at(0).main.temp;
     //const currentCityDate = data.list.array[0].dt_txt
-    console.log(mainDayCard)
-    //console.log(data.list)
-    //console.log(data.list.at(0))
-    //console.log(data.list.at(0).dt_txt)
 
     const cardBody = document.createElement('div');
-    const cardTitle = document.createElement('h2')
+    const cardTitle = document.createElement('h2');
     cardTitle.textContent = `Weather for: ${currentCityName}`;
+
+    const cardTemp = document.createElement('p');
+    cardTemp.textContent = `Temp: ${currentTemp}`;
+
+    const cardHum = document.querySelector('p');
 
 
     cardBody.append(cardTitle);
+    cardBody.append(cardTemp)
     mainDayCard.innerHTML = '';
 
 
