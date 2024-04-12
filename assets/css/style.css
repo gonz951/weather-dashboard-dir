@@ -101,6 +101,6 @@ main {
 #week-card4,
 #week-card5 {
     padding: 2%;
-
+    margin: 2%;
     border: 2px red solid;
 }
