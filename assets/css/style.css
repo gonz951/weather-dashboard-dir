@@ -76,8 +76,9 @@ main {
 
 #day-card {
     padding: 5%;
-    margin: 4%;
+    margin: 2%;
     border: 2px var(--gray) solid;
+    border-radius: 25px;
     h2 {
         font-size: 35px;
     }
@@ -90,9 +91,8 @@ main {
 #week-container {
     display: flex;
     flex-direction: row;
-    padding: 2%;
-    margin: 5% 2%;
-    border: 2px red solid;
+    margin: 1%;
+    /* border: 2px red solid; */
 }
 
 #week-card1,
@@ -100,7 +100,15 @@ main {
 #week-card3,
 #week-card4,
 #week-card5 {
-    padding: 2%;
-    margin: 2%;
-    border: 2px red solid;
+    padding: 3%;
+    margin: 1%;
+    border: 2px var(--gray) solid;
+    border-radius: 20px;
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        line-height: 25px;
+        font-size: 15px;
+    }
 }
