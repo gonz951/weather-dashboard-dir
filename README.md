@@ -19,13 +19,12 @@ No installation needed! Just a link: https://gonz951.github.io/weather-dashboard
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+First, you go to the page and enter a city into the search bar. 
+![Search Bar function](./assets/images/screenshot-search0.png)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+The search bar will take user input and run it through the api, then translate those results onto the page.
+![Getting city results](./assets/images/screenshot-search1.png)
 
 ## Credits
 
