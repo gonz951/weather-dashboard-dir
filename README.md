@@ -13,7 +13,9 @@ This project was meant to be a lesson on using server api's and how to navigate 
 
 ## Installation
 
-No installation needed! Just a link:
+No installation needed! Just a link: https://gonz951.github.io/weather-dashboard-dir/
+
+(Might be finicky due to insecure source, but if opened on it's own it will work.)
 
 ## Usage
 
