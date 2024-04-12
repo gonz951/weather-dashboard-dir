@@ -81,7 +81,19 @@ main {
 }
 
 #week-container {
+    display: flex;
+    flex-direction: row;
     padding: 5%;
     margin: 5% 2%;
+    border: 2px red solid;
+}
+
+#week-card1,
+#week-card2,
+#week-card3,
+#week-card4,
+#week-card5 {
+    padding: 2%;
+    
     border: 2px red solid;
 }
