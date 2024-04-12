@@ -157,12 +157,80 @@ const displayCity = function (data) {
     weekCard2.append(cardBody2);
 
     // Week Card 3
-    
+    const date3 = data.list.at(23).dt_txt;
+    const currentTemp3 = data.list.at(23).main.temp;
+    const currentWind3 = data.list.at(23).wind.speed;
+    const currentHum3 = data.list.at(23).main.humidity;
 
+    const cardBody3 = document.createElement('div');
+    const cardDate3 = document.createElement('h3');
+    cardDate3.textContent = `${date3}`
 
+    const cardTemp3 = document.createElement('p');
+    cardTemp3.textContent = `Temp: ${currentTemp3}`;
 
+    const cardWind3 = document.createElement('p');
+    cardWind3.textContent = `Wind: ${currentWind3} MPH`;
 
+    const cardHum3 = document.createElement('p');
+    cardHum3.textContent = `Humidity: ${currentHum3}%`
 
+    cardBody3.append(cardDate3);
+    cardBody3.append(cardTemp3);
+    cardBody3.append(cardWind3);
+    cardBody3.append(cardHum3);
+    weekCard3.append(cardBody3);
+
+    // Week card 4
+    const date4 = data.list.at(31).dt_txt;
+    const currentTemp4 = data.list.at(31).main.temp;
+    const currentWind4 = data.list.at(31).wind.speed;
+    const currentHum4 = data.list.at(31).main.humidity;
+
+    const cardBody4 = document.createElement('div');
+    const cardDate4 = document.createElement('h3');
+    cardDate4.textContent = `${date4}`
+
+    const cardTemp4 = document.createElement('p');
+    cardTemp4.textContent = `Temp: ${currentTemp4}`;
+
+    const cardWind4 = document.createElement('p');
+    cardWind4.textContent = `Wind: ${currentWind4} MPH`;
+
+    const cardHum4 = document.createElement('p');
+    cardHum4.textContent = `Humidity: ${currentHum4}%`
+
+    cardBody4.append(cardDate4);
+    cardBody4.append(cardTemp4);
+    cardBody4.append(cardWind4);
+    cardBody4.append(cardHum4);
+    weekCard4.append(cardBody4);
+
+    // Week Card 5
+    const date5 = data.list.at(39).dt_txt;
+    const currentTemp5 = data.list.at(39).main.temp;
+    const currentWind5 = data.list.at(39).wind.speed;
+    const currentHum5 = data.list.at(39).main.humidity;
+
+    const cardBody5 = document.createElement('div');
+    const cardDate5 = document.createElement('h3');
+    cardDate5.textContent = `${date5}`
+
+    const cardTemp5 = document.createElement('p');
+    cardTemp5.textContent = `Temp: ${currentTemp5}`;
+
+    const cardWind5 = document.createElement('p');
+    cardWind5.textContent = `Wind: ${currentWind5} MPH`;
+
+    const cardHum5 = document.createElement('p');
+    cardHum5.textContent = `Humidity: ${currentHum5}%`
+
+    cardBody5.append(cardDate5);
+    cardBody5.append(cardTemp5);
+    cardBody5.append(cardWind5);
+    cardBody5.append(cardHum5);
+    weekCard5.append(cardBody5);
+    // week cards done
 
     // ! ============= button zone
     // make the citysearchterm text content 
