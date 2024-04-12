@@ -27,6 +27,9 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
+Used Full-stack blog to get started:
+https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys
+
 Got help with the weather api forecast count here:
 https://stackoverflow.com/questions/63222396/5-day-weather-forecast-on-openweathermap-not-giving-expected-result
 
