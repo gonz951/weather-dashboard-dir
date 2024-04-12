@@ -103,6 +103,7 @@ const displayCity = function (data) {
     // End of main day card
     
     // start of minor week cards
+    // Week card 1
     const date1 = data.list.at(7).dt_txt;
     const currentTemp1 = data.list.at(7).main.temp;
     const currentWind1 = data.list.at(7).wind.speed;
@@ -116,15 +117,24 @@ const displayCity = function (data) {
     // const date4 = data.list.at(31).dt_txt;
     // const date5 = data.list.at(39).dt_txt;
     console.log(date1)
-    const weekContainer = document.createElement('div');
     const cardBody1 = document.createElement('div');
     const cardDate1 = document.createElement('h3');
     cardDate1.textContent = `${date1}`
 
-    cardBody1.append(cardDate1);
-    weekContainer.append(cardBody1);
-    minorWeekCards.append(weekContainer);
+    const cardTemp1 = document.createElement('p');
+    cardTemp1.textContent = `Temp: ${currentTemp1}`;
 
+    const cardWind1 = document.createElement('p');
+    cardWind1.textContent = `Wind: ${currentWind1} MPH`;
+
+    const cardHum1 = document.createElement('p');
+    cardHum1.textContent = `Humidity: ${currentHum1}%`
+
+    cardBody1.append(cardDate1);
+    cardBody1.append(cardTemp1);
+    cardBody1.append(cardWind1);
+    cardBody1.append(cardHum1);
+    weekCard1.append(cardBody1);
 
     // ! ============= button zone
     // make the citysearchterm text content 
