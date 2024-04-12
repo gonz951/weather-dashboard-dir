@@ -72,13 +72,7 @@ const displayCity = function (data) {
     const currentCityName = data.city.name;
     const currentTemp = data.list.at(0).main.temp;
     const currentWind = data.list.at(0).wind.speed;
-    console.log(data.list.at(0).wind.speed)
-    console.log(currentWind)
-
     const currentHum = data.list.at(0).main.humidity;
-    console.log(data.list.at(0).main.humidity)
-    console.log(currentHum)
-    //const currentCityDate = data.list.array[0].dt_txt
 
     const cardBody = document.createElement('div');
     const cardTitle = document.createElement('h2');
@@ -99,12 +93,32 @@ const displayCity = function (data) {
     cardBody.append(cardWind);
     cardBody.append(cardHum);
     mainDayCard.innerHTML = '';
-
-
-
     mainDayCard.append(cardBody);
 
-    minorWeekCard.append('something')
+    // End of main day card
+    
+    // start of minor week cards
+    const date1 = data.list.at(7).dt_txt;
+    const currentTemp1 = data.list.at(7).main.temp;
+    const currentWind1 = data.list.at(7).wind.speed;
+    const currentHum1 = data.list.at(7).main.humidity;
+
+    // const date2 = data.list.at(16).dt_txt;
+    // const currentTemp = data.list.at(0).main.temp;
+    // const currentWind = data.list.at(0).wind.speed;
+    // const currentHum = data.list.at(0).main.humidity;
+    // const date3 = data.list.at(23).dt_txt;
+    // const date4 = data.list.at(31).dt_txt;
+    // const date5 = data.list.at(39).dt_txt;
+    console.log(date1)
+    const weekContainer = document.createElement('div');
+    const cardBody1 = document.createElement('div');
+    const cardDate1 = document.createElement('h3');
+    cardDate1.textContent = `${date1}`
+
+    cardBody1.append(cardDate1);
+    weekContainer.append(cardBody1);
+    minorWeekCard.append(weekContainer);
 
 
     // ! ============= button zone
