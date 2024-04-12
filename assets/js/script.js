@@ -108,11 +108,6 @@ const displayCity = function (data) {
     const currentTemp1 = data.list.at(7).main.temp;
     const currentWind1 = data.list.at(7).wind.speed;
     const currentHum1 = data.list.at(7).main.humidity;
-
-    // const date2 = data.list.at(16).dt_txt;
-    // const currentTemp = data.list.at(0).main.temp;
-    // const currentWind = data.list.at(0).wind.speed;
-    // const currentHum = data.list.at(0).main.humidity;
     // const date3 = data.list.at(23).dt_txt;
     // const date4 = data.list.at(31).dt_txt;
     // const date5 = data.list.at(39).dt_txt;
@@ -135,6 +130,39 @@ const displayCity = function (data) {
     cardBody1.append(cardWind1);
     cardBody1.append(cardHum1);
     weekCard1.append(cardBody1);
+
+    // Week card 2
+    const date2 = data.list.at(15).dt_txt;
+    const currentTemp2 = data.list.at(15).main.temp;
+    const currentWind2 = data.list.at(15).wind.speed;
+    const currentHum2 = data.list.at(15).main.humidity;
+
+    const cardBody2 = document.createElement('div');
+    const cardDate2 = document.createElement('h3');
+    cardDate2.textContent = `${date2}`
+
+    const cardTemp2 = document.createElement('p');
+    cardTemp2.textContent = `Temp: ${currentTemp2}`;
+
+    const cardWind2 = document.createElement('p');
+    cardWind2.textContent = `Wind: ${currentWind2} MPH`;
+
+    const cardHum2 = document.createElement('p');
+    cardHum2.textContent = `Humidity: ${currentHum2}%`
+
+    cardBody2.append(cardDate2);
+    cardBody2.append(cardTemp2);
+    cardBody2.append(cardWind2);
+    cardBody2.append(cardHum2);
+    weekCard2.append(cardBody2);
+
+    // Week Card 3
+    
+
+
+
+
+
 
     // ! ============= button zone
     // make the citysearchterm text content 
