@@ -6,9 +6,14 @@ const nameInputEl = document.querySelector('#cityname');
 // This is the container for the weather cards
 const weatherContainerEl = document.querySelector('#dashboard');
 
-// Might need to append to these later
 const mainDayCard = document.querySelector('#day-card');
 const minorWeekCards = document.querySelector('#week-container');
+
+const weekCard1 = document.querySelector('#week-card1');
+const weekCard2 = document.querySelector('#week-card2');
+const weekCard3 = document.querySelector('#week-card3');
+const weekCard4 = document.querySelector('#week-card4');
+const weekCard5 = document.querySelector('#week-card5');
 
 // ? Local storage element for the buttons later
 let cityStorage = JSON.parse(localStorage.getItem('city'));
