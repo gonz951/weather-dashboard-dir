@@ -42,7 +42,7 @@ const formSubmitHandler = function (event) {
 
 // ? NEED FUNCTION FOR WEEK WEATHER
 const getCityWeather = function (city) {
-    const queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}`;
+    const queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}`;
     
     
     fetch(queryURL)
