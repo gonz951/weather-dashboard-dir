@@ -71,6 +71,13 @@ const displayCity = function (data) {
     // Grabbing elements within the arrays 
     const currentCityName = data.city.name;
     const currentTemp = data.list.at(0).main.temp;
+    const currentWind = data.list.at(0).wind.speed;
+    console.log(data.list.at(0).wind.speed)
+    console.log(currentWind)
+
+    const currentHum = data.list.at(0).main.humidity;
+    console.log(data.list.at(0).main.humidity)
+    console.log(currentHum)
     //const currentCityDate = data.list.array[0].dt_txt
 
     const cardBody = document.createElement('div');
@@ -80,11 +87,17 @@ const displayCity = function (data) {
     const cardTemp = document.createElement('p');
     cardTemp.textContent = `Temp: ${currentTemp}`;
 
-    const cardHum = document.querySelector('p');
+    const cardWind = document.createElement('p');
+    cardWind.textContent = `Wind: ${currentWind} MPH`;
+
+    const cardHum = document.createElement('p');
+    cardHum.textContent = `Humidity: ${currentHum}%`
 
 
     cardBody.append(cardTitle);
-    cardBody.append(cardTemp)
+    cardBody.append(cardTemp);
+    cardBody.append(cardWind);
+    cardBody.append(cardHum);
     mainDayCard.innerHTML = '';
 
 
