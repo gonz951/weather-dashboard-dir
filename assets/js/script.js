@@ -8,7 +8,7 @@ const weatherContainerEl = document.querySelector('#dashboard');
 
 // Might need to append to these later
 const mainDayCard = document.querySelector('#day-card');
-const minorWeekCard = document.querySelector('#week-card');
+const minorWeekCards = document.querySelector('#week-container');
 
 // ? Local storage element for the buttons later
 let cityStorage = JSON.parse(localStorage.getItem('city'));
@@ -118,7 +118,7 @@ const displayCity = function (data) {
 
     cardBody1.append(cardDate1);
     weekContainer.append(cardBody1);
-    minorWeekCard.append(weekContainer);
+    minorWeekCards.append(weekContainer);
 
 
     // ! ============= button zone
